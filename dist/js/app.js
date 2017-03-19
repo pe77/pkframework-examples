@@ -47,9 +47,7 @@ var Pk;
             this.load.image('pk-loading-bar', this.game.getConfig().loaderLoadingBar);
         };
         PkLoaderPreLoader.prototype.create = function () {
-            // console.log('this.game.getConfig().loaderState:', this.game.getConfig().loaderState);
             // change to preloader screen*
-            // this.game.getConfig().loaderState();
             this.game.state.start('PkLoader');
         };
         return PkLoaderPreLoader;
@@ -170,7 +168,6 @@ var Pk;
             this.clearWorld = true;
             this.clearCache = false;
             this.game = game;
-            console.log('PkTransition constructor');
             this.transitionAnimation.event.add(Pk.E.OnTransitionEndStart, this.endStartAnimation, this);
             this.transitionAnimation.event.add(Pk.E.OnTransitionEndEnd, this.endStartAnimation, this);
         }
@@ -183,13 +180,12 @@ var Pk;
             this.params = args;
             this.transitionAnimation.start();
         };
+        // This is called when the state preload has finished and creation begins
         PkTransition.prototype.endStartAnimation = function (e) {
             var args = [];
             for (var _i = 1; _i < arguments.length; _i++) {
                 args[_i - 1] = arguments[_i];
             }
-            // This is called when the state preload has finished and creation begins
-            console.log('change to state:', this.to);
             (_a = this.game.state).start.apply(_a, [this.to, this.clearWorld, this.clearCache].concat(this.params));
             this.transitionAnimation.end();
             var _a;
@@ -213,7 +209,6 @@ var Pk;
             _this.id = ++PkElement.id;
             _this.tweens = [];
             _this.name = "PkElement-" + _this.id;
-            console.log('PkElement create ID:', _this.id);
             // inicia gerenciador de eventos
             _this.event = new Pk.PkEvent('element-event-' + _this.id, _this);
             return _this;
@@ -503,17 +498,13 @@ var Pk;
                 this.event = new Pk.PkEvent('PkTADefault', this);
             }
             Default.prototype.start = function () {
-                console.log('start in...');
-                // animation
+                // animation here
                 // ...
-                console.log('...start out');
                 this.event.dispatch(Pk.E.OnTransitionEndStart);
             };
             Default.prototype.end = function () {
-                console.log('end in...');
-                // animation
+                // animation here
                 // ...
-                console.log('...end out');
                 this.event.dispatch(Pk.E.OnTransitionEndEnd);
             };
             return Default;
