@@ -92,14 +92,6 @@ var GameBase;
             _this.state.add('Menu', GameBase.Menu);
             _this.state.add('Main', GameBase.Main);
             return _this;
-            /*
-            this.state.add('Boot', Boot, false);
-            this.state.add('Preloader', Preloader, false);
-            this.state.add('MainMenu', MainMenu, false);
-            this.state.add('Level1', Level1, false);
- 
-            this.state.start('Boot');
-            */
         }
         return Game;
     }(Pk.PkGame));
@@ -326,10 +318,10 @@ var Pk;
             var _this = this;
             setTimeout(function () {
                 // if initial state set, load
-                if (_this.game.getConfig().initialState != '')
-                    _this.game.state.start(_this.game.getConfig().initialState);
+                if (_this.game.pkConfig.initialState != '')
+                    _this.game.state.start(_this.game.pkConfig.initialState);
                 //
-            }, this.game.getConfig().loaderWaitingTime);
+            }, this.game.pkConfig.loaderWaitingTime);
         };
         return PkLoader;
     }(Pk.PkState));
@@ -416,17 +408,18 @@ var GameBase;
             // create two elements
             var simon = new Pk.PkElement(this.game);
             var square = new Pk.PkElement(this.game);
-            // action event test
+            // event listener
             simon.event.add('onAutoWhip', function (event, param1, param2, param3) {
                 console.log('onAutoWhip reach! Params:', event, param1, param2, param3);
             });
             setTimeout(function () {
+                // dispatch event
                 simon.event.dispatch('onAutoWhip', 1, [1], 'one');
             }, 1000);
             // add/create sprite
             simon.add(this.game.add.sprite(0, 0, 'simon'));
             square.add(Pk.PkUtils.createSquare(this.game, 45, 45, "#ff00ff"));
-            // add algumas layers
+            // add layers. yep!
             this.addLayer('stage-back');
             this.addLayer('player');
             this.addLayer('stage-front');
@@ -460,7 +453,8 @@ var GameBase;
             console.log('Menu create');
             this.game.stage.backgroundColor = "#89aca6";
             setTimeout(function () {
-                _this.transition.change('Main', 'foi', 77);
+                // change pass params | any
+                _this.transition.change('Main', 'data string 1', 123456);
             }, 1000);
         };
         return Menu;

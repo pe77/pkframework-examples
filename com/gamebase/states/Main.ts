@@ -21,22 +21,22 @@ module GameBase
     		var simon = new Pk.PkElement(this.game);
     		var square = new Pk.PkElement(this.game);
 
-    		// action event test
+    		// event listener
     		simon.event.add('onAutoWhip', (event, param1, param2, param3)=>{
     			console.log('onAutoWhip reach! Params:', event, param1, param2, param3);
     		});
 
     		setTimeout(()=>{
+				// dispatch event
     			simon.event.dispatch('onAutoWhip', 1, [1], 'one');
     		}, 1000);
     		
-
     		// add/create sprite
     		simon.add(this.game.add.sprite(0, 0, 'simon'));
     		square.add(Pk.PkUtils.createSquare(this.game, 45, 45, "#ff00ff"));
 
 
-    		// add algumas layers
+    		// add layers. yep!
     		this.addLayer('stage-back');
     		this.addLayer('player');
     		this.addLayer('stage-front');

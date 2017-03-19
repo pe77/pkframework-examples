@@ -21,7 +21,8 @@ module GameBase
 
     		
     		setTimeout(()=>{
-                this.transition.change('Main', 'foi', 77);
+				// change pass params | any
+                this.transition.change('Main', 'data string 1', 123456);
     		}, 1000);
     		
     	}
