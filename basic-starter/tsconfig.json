@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "target": "es5",
+        "sourceMap": true,
+        "outFile": "dist/js/app.js"
+    },
+    "exclude": [
+        "assets",
+        "vendor"
+    ]
+}
