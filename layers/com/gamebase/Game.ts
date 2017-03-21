@@ -1,5 +1,5 @@
-/// <reference path='../pk/PkGame.ts' />
-/// <reference path='../pk/PkConfig.ts' />
+/// <reference path='../../../com/pk/PkGame.ts' />
+/// <reference path='../../../com/pk/PkConfig.ts' />
 
 module GameBase {
  
