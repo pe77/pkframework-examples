@@ -1,4 +1,4 @@
-/// <reference path='../../../com/pk/PkLoader.ts' />
+/// <reference path='../../vendor/ts/pkframework.d.ts' />
 
 module GameBase {
  

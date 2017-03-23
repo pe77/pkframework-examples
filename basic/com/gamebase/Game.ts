@@ -1,5 +1,5 @@
-/// <reference path='../../../com/pk/PkGame.ts' />
-/// <reference path='../../../com/pk/PkConfig.ts' />
+/// <reference path='../../vendor/ts/pkframework.d.ts' />
+/// <reference path='../../vendor/ts/phaser.d.ts' />
 
 module GameBase {
  
@@ -11,10 +11,7 @@ module GameBase {
             // add default state
             this.state.add('Menu', GameBase.Menu);
             this.state.add('Main', GameBase.Main);
-            
         }
-
- 
     }
 
     class Config extends Pk.PkConfig
