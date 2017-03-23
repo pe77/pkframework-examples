@@ -98,6 +98,6 @@ or simply
 ```bin
 $ pkframe init
 ```
-
+> This basic template is default parameter!
 
 
