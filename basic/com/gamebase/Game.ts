@@ -6,7 +6,7 @@ module GameBase {
     export class Game extends Pk.PkGame {
  
         constructor() {
-            super(new Config());
+            super(new Config()); 
 
             // add default state
             this.state.add('Menu', GameBase.Menu);
