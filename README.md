@@ -82,3 +82,22 @@ init(param1, param2, param3) // or | init(...args:any[]) |
 ```
 
 You can see the logs in the browser.
+
+### Layers - Template
+
+> @todo
+
+In Action
+--------
+
+To test this example simply download or install using [pkframe client](https://github.com/pe77/pkframework-cli) and the command:
+```bin
+$ pkframe init -p basic
+```
+or simply
+```bin
+$ pkframe init
+```
+
+
+
