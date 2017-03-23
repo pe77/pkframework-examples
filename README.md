@@ -20,7 +20,7 @@ Here are just examples of use. To learn more about the framework, [go to this re
 
 Here a folder struct proposal:
 
-![](http://i.imgur.com/yoQg96w.png)
+![](http://i.imgur.com/0MrwQw6.png)
 
 
 The framework, like your code, is build using typescript. 
@@ -44,7 +44,7 @@ but this is configurable, just like the other boot options. See more in PK Frame
 
 ---------
 
-### Basic
+### Basic - Template
 
 Only basic use of framework. 
 
@@ -52,3 +52,33 @@ Load several bullshit assets(only for load test) start on
 ```typescript
 this.initialState = 'Menu';
 ```
+
+This template only opens the menu screen and switches to the main screen when you press [space]. In the main screen, if you press [enter], it returns to the menu screen by passing a few parameters.
+
+```javascript
+// com/gamebase/states/Menu.ts
+if (this.spaceBarKey.isDown)
+    this.transition.change('Main');  // change to main state (somenthing like game first stage or options state)
+//
+```
+
+```javascript
+// com/gamebase/states/Main.ts
+if (this.enterKey.isDown)
+    this.transition.change('Menu', 1111, 'text', {a:true, b:[1, 2]});  // return with some foo/bar args
+//
+```
+
+When returning to the menu, the main screen passes some arguments that can be received in:
+```javascript
+// com/gamebase/states/Menu.ts
+init(param1, param2, param3) // or | init(...args:any[]) |
+{
+    super.init(); // if whant override init, you need this line!
+    console.log('Menu init');
+
+    console.log('params:', param1, param2, param3);
+}
+```
+
+You can see the logs in the browser.
