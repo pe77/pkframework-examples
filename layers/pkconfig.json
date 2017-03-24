@@ -1,0 +1,14 @@
+{
+    "install": {
+        "assets": {
+            "url": "https://github.com/pe77/pkframework-assets/archive/master.zip",
+            "folder": "assets"
+        },
+        "dependencies": {
+            "pkframework": {
+                "url": "https://github.com/pe77/pkframework/archive/master.zip",
+                "use": "build/"
+            }
+        }
+    }
+}
