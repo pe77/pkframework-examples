@@ -1,2 +1,5 @@
 **/dist
 .vscode
+**/assets
+**/vendor
+**/vendor/!phaser
