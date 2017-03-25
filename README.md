@@ -3,16 +3,19 @@ Basic Samples/Demos of Use PkFramework (phaser.io based)
 
 >First of all: Sorry for my shitty english...
 
-This is a series of examples of using pkframework.
-
-This is an **organizational framework**. The focus is not to redo code or optimize game performance, but:
-
-- Speed up game production
-- Organize and modularize the code
-
-*keep this in mind*
-
 Here are just examples of use. To learn more about the framework, [go to this repo](https://github.com/pe77/pkframeword).
+
+Get Starter
+------------
+
+To run these examples you need to install, install [Node.js](https://nodejs.org/en/). Then, install the latest pkframe cli command-line tools in your terminal. 
+
+```bash
+$ npm install -g pkframe
+```
+
+[framework client details and other options](https://github.com/pe77/pkframework-cli)
+
 
 ----------
 
@@ -81,7 +84,12 @@ init(param1, param2, param3) // or | init(...args:any[]) |
 }
 ```
 
-You can see the logs in the browser.
+__Run this model__
+```bin
+$ pkframe init -p basic
+```
+
+>You can see the logs in the browser.
 
 ### Layers - Template
 
@@ -89,17 +97,8 @@ You can see the logs in the browser.
 
 ![](http://i.imgur.com/Gn7V9FJ.png)
 
-In Action
---------
-
-To test this example simply install [pkframe client](https://github.com/pe77/pkframework-cli) and run:
+__Run this model__
 ```bin
-$ pkframe init -p basic
+$ pkframe init -p layers
 ```
-or 
-```bin
-$ pkframe init
-```
-> This __basic__ template is default parameter!
-
 
