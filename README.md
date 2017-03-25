@@ -85,7 +85,9 @@ You can see the logs in the browser.
 
 ### Layers - Template
 
-> @todo
+![](http://i.imgur.com/Syvj2Eg.png)
+
+![](http://i.imgur.com/Gn7V9FJ.png)
 
 In Action
 --------
