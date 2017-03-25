@@ -2,7 +2,5 @@
 .vscode
 **/assets
 
-layers/vendor
-
-basic/vendor
-!basic/vendor/phaser/
+**/vendor/*
+!**/vendor/phaser/
