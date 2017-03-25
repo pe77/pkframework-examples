@@ -1,4 +1,5 @@
 /// <reference path='../../../vendor/pkframework/ts/pkframework.d.ts' />
+/// <reference path='../../../vendor/phaser/ts/phaser.d.ts' />
 
 module GameBase
 {
@@ -6,7 +7,7 @@ module GameBase
 	export class Main extends Pk.PkState {
 
 		cursors:Phaser.CursorKeys;
-		simon:Pk.PkElement;
+		simon:Simon;
 
 		speed:number = 3;
 
@@ -20,31 +21,15 @@ module GameBase
     		console.log('Main create');
 			
     		// create some elements
-    		this.simon 		= new Pk.PkElement(this.game);
+    		this.simon 		= new Simon(this.game, this.game.add.sprite(0, 0, 'simon'));
     		var stageBack 	= new Pk.PkElement(this.game);
 			var stageFront 	= new Pk.PkElement(this.game);
 			var pillars 	= new Pk.PkElement(this.game);
-
-			this.simon.enableBody = true;
 
 			// add layers
     		this.addLayer('stage-back');
     		this.addLayer('player');
     		this.addLayer('stage-front');
-
-    		// event listener
-    		this.simon.event.add('onAutoWhip', (event, param1, param2, param3)=>{
-    			console.log('onAutoWhip reach! Params:', event, param1, param2, param3);
-    		});
-
-			// dispatch event test 
-    		setTimeout(()=>{
-				// dispatch event
-    			this.simon.event.dispatch('onAutoWhip', 1, [1], 'one');
-    		}, 1000);
-    		
-    		// create sprites ... and add to element
-    		this.simon.add(this.game.add.sprite(0, 0, 'simon')); // player
 
 			// bg half size of world
     		stageBack.add(Pk.PkUtils.createSquare(this.game, this.game.world.width, this.game.world.height/2, "#775577")); // stage bg (same size of world)
@@ -72,12 +57,19 @@ module GameBase
 
 		update()
 		{
+			// pressbutton is pressed
 			if (this.cursors.left.isDown)
-				this.simon.x -= this.speed; // moon walk
+				this.simon.move(GameBase.SimonDirection.LEFT);
 			//
 			
+			// right button is pressed
 			if (this.cursors.right.isDown)
-				this.simon.x += this.speed;
+				this.simon.move(GameBase.SimonDirection.RIGHT);
+			//
+
+			// none is pressed | idle
+			if (!this.cursors.right.isDown && !this.cursors.left.isDown)
+				this.simon.idle();
 			//
 		}
 
