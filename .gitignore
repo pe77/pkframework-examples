@@ -1,6 +1,8 @@
 **/dist
 .vscode
 **/assets
-**/vendor
-**/vendor/!phaser
-**/vendor/!phaser/!ts
+
+layers/vendor
+
+basic/vendor
+!basic/vendor/phaser/
