@@ -45,9 +45,8 @@ by default, the framework load game screen on html element id "game":
 
 but this is configurable, just like the other boot options. See more in PK Framework API.
 
----------
-
-### Basic - Template
+Basic - Template
+---------------------
 
 Only basic use of framework. 
 
@@ -91,7 +90,9 @@ $ pkframe init -p basic
 
 >You can see the logs in the browser.
 
-### Layers - Template
+
+Layers - Template
+---------------------
 
 ![](http://i.imgur.com/Syvj2Eg.png)
 
