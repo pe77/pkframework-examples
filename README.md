@@ -90,14 +90,14 @@ You can see the logs in the browser.
 In Action
 --------
 
-To test this example simply download or install using [pkframe client](https://github.com/pe77/pkframework-cli) and the command:
+To test this example simply install [pkframe client](https://github.com/pe77/pkframework-cli) and run:
 ```bin
 $ pkframe init -p basic
 ```
-or simply
+or 
 ```bin
 $ pkframe init
 ```
-> This basic template is default parameter!
+> This __basic__ template is default parameter!
 
 
