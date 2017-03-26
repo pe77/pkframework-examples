@@ -103,3 +103,15 @@ __Run this model__
 $ pkframe init -p layers
 ```
 
+
+Layers - Simple Parallax
+---------------------
+
+![](http://i.imgur.com/8014dFk.png)
+
+__Run this model__
+```bin
+$ pkframe init -p parallax
+```
+
+
