@@ -3,7 +3,7 @@ Basic Samples/Demos of Use PkFramework (phaser.io based)
 
 >First of all: Sorry for my shitty english...
 
-Here are just examples of use. To learn more about the framework, [go to this repo](https://github.com/pe77/pkframeword).
+Here are just examples of use. To learn more : [Quick Start Guide](https://github.com/pe77/pkframework/wiki)
 
 Get Starter
 ------------
