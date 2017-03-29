@@ -21,11 +21,6 @@ $ npm install -g pkframe
 
 ## Examples
 
-For a detailed explanation of each example, go to:
-
-#### wiki: https://github.com/pe77/pkframework-examples/wiki
-
-
 Basic
 ---------------------
 
@@ -62,3 +57,6 @@ $ pkframe init -p parallax
 ```
 
 
+For a detailed explanation of each example, go to:
+
+#### wiki: https://github.com/pe77/pkframework-examples/wiki
