@@ -22,15 +22,13 @@ module GameBase
 
     		// get the keyboard key to come back to menu
             this.enterKey = this.game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
+
+			// when press the key...
+            this.enterKey.onDown.add(()=>{
+                this.transition.change('Menu', 1111, 'text', {a:true, b:[1, 2]});  // return with some foo/bar args
+            }, this);
     	}
 
-        update()
-        {
-            // when press the key...
-            if (this.enterKey.isDown)
-                this.transition.change('Menu', 1111, 'text', {a:true, b:[1, 2]});  // return with some foo/bar args
-            //
-        }
 
 		render()
 		{

@@ -26,16 +26,13 @@ module GameBase
 
     		// get the keyboard
             this.spaceBarKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+
+            // when press the key...
+            this.spaceBarKey.onDown.add(()=>{
+                this.transition.change('Main'); // change to state Main
+            }, this);
     		
     	}
-
-        update()
-        {
-            // when press the key...
-            if (this.spaceBarKey.isDown)
-                this.transition.change('Main');  // change to main state (somenthing like game first stage or options state)
-            //
-        }
 
         render()
         {
