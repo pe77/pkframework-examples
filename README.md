@@ -57,6 +57,17 @@ $ pkframe init -p parallax
 ```
 
 
+Custom State Transitions Effect
+---------------------
+
+![](http://i.imgur.com/Nmo9gWI.png)
+
+__Run this model__
+```bin
+$ pkframe init -p transition
+```
+
+
 For a detailed explanation of each example, go to:
 
 #### wiki: https://github.com/pe77/pkframework-examples/wiki
